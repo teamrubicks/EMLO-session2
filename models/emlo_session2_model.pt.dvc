@@ -1,0 +1,4 @@
+outs:
+- md5: eb942f43738ad645f80d7a68c9577754
+  size: 44773837
+  path: emlo_session2_model.pt

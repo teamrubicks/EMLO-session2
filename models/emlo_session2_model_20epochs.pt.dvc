@@ -1,0 +1,4 @@
+outs:
+- md5: f12712794848f7304aa68279c16b713b
+  size: 44773837
+  path: emlo_session2_model_20epochs.pt
