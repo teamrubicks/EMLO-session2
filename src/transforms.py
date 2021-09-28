@@ -1,7 +1,9 @@
 from torchvision import transforms
+from torchvision.transforms.transforms import RandomResizedCrop
 
 train_transform = transforms.Compose(
     transforms=[
+        transforms.RandomCrop(32, padding=4),
         transforms.Resize((32, 32)),
         transforms.RandomHorizontalFlip(),
         transforms.RandomRotation(2),

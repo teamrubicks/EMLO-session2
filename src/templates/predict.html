@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content%}
+<div>
+    <form class="form-prediction" method=post action='/'>
+
+        {% if prediction %}
+        <h3 class="h3 mb-3 font-weight-normal"> Prediction: {{prediction}} </h3>
+        {% endif %}
+        {% if img_data %}
+        <img class="mb-4" src="{{img_data}}" alt="" width=250, height='250'>
+        {% endif%}
+        <button class="btn btn-md btn-secondary btn-block" type='submit'>BACK</button>
+    </form>
+    <br />
+
+</div>
+
+{% endblock content %}

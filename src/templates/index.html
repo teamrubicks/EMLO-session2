@@ -1,36 +1,17 @@
-<!doctype html>
+<{% extends 'base.html' %} {% block content%} <form class="form-prediction" method=post enctype="multipart/form-data"
+    action='/predict'>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <h1 class="h3 mb-3 font-weight-normal">Upload Image</h1>
+    <input type="file" id="image" name='image' class="form-control" required autofocus>
 
-
-    <title>Sample Web App for CIFA10 Prediction</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- Custom styles for this template -->
-    <link href="/static/prediction.css" rel="stylesheet">
-</head>
-
-<body class="text-center">
-    <form class="form-prediction" method=post enctype="multipart/form-data">
-
-        <h1 class="h3 mb-3 font-weight-normal">Upload Image</h1>
-        <input type="file" id="image" name='image' class="form-control" required autofocus>
-
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Predict</button>
-        <br>
-        {% if prediction %}
-        <h3 class="h3 mb-3 font-weight-normal"> Prediction: {{prediction}} </h3>
-        {% endif %}
-        {% if img_data %}
-        <img class="mb-4" src="{{img_data}}" alt="" width=250, height='250'>
-        {% endif%}
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Predict</button>
+    <br>
+    <!-- {% if prediction %}
+    <h3 class="h3 mb-3 font-weight-normal"> Prediction: {{prediction}} </h3>
+    {% endif %}
+    {% if img_data %}
+    <img class="mb-4" src="{{img_data}}" alt="" width=250, height='250'>
+    {% endif%} -->
 
     </form>
-</body>
-
-</html>
+    {% endblock content%}
