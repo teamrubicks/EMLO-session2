@@ -131,4 +131,4 @@ dmypy.json
 
 # Data files
 data/*
-*.pt
+test_imgs/*
